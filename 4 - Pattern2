@@ -193,4 +193,298 @@ int main() {
 */
 
 // Pattern18
+/* D
+   CD
+   BCD
+   ABCD
+   
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	
+	while(row <= n){
+	    int col = 1;
+	    char ch = 'A' + n - row;
+	    while(col <= row){
+	        cout << ch;
+	        ch = ch + 1;
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern19
+/*     *
+      **
+     ***
+    ****
+    
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	
+	while(row <= n){
+	    int col = 1;
+	    while(col <= n){
+	        if(col <= n-row){
+	            cout << " ";
+	        }
+	        else{
+	            cout << "*";
+	        }
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern20
+/* ****
+   ***
+   **
+   *
+   
+#include <iostream>                                                     #include<iostream>
+using namespace std;                                                    using namespace std;
+        
+int main(){                  																						int main(){
+  int n;																																	int n;
+	cin >> n;																																cin >> n;
+	int row = 1;																														int row = 1;                   // This method is good, as you only care about printing "*"
+	 																																				
+	while(row <= n){                                 OR         						while(row <= n){
+	    int col = 1;																													int col = 1;                  
+	    while(col <= n){																											while(col <= n - row + 1){
+	        if(col <= n-row+1){																									cout << "*";
+	            cout << "*";																										col = col + 1;
+	        }																																	}
+	        else{																															cout << endl;
+	            cout << " ";																									row = row + 1;
+	        }																																}
+	        col = col + 1;																									return 0;
+	    }																																	}
+	    cout << endl;																											
+	    row = row + 1;
+	}
+	return 0;
+}
+
+// Pattern21
+/* ****
+    ***
+	   **
+	    *
+	 
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	
+	while(row <= n){
+	    int col = 1;
+	    while(col <= n){
+	        if(col <= row-1){
+	            cout << " ";
+	        }
+	        else{
+	            cout << "*";
+	        }
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern22
+/* 1111
+    222
+		 33
+		  4
+			
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	
+	while(row <= n){
+	    int col = 1;
+	    while(col <= n){
+	        if(col <= row-1){
+	            cout << " ";
+	        }
+	        else{
+	            cout << row;
+	        }
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern23
+/*     1
+      22
+		 333
+		4444
+		
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	
+	while(row <= n){
+	    int col = 1;
+	    while(col <= n){
+	        if(col <= n-row){
+	            cout << " ";
+	        }
+	        else{
+	            cout << row;
+	        }
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern24
+/* 1234
+    234
+		 34
+		  4
+			
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	
+	while(row <= n){
+	    int col = 1;
+	    while(col <= n){
+	        if(col <= row-1){
+	            cout << " ";
+	        }
+	        else{
+	            cout << col;
+	        }
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern25
+/*     1
+      23
+		 456
+		 
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	int count = 1;
+	
+	while(row <= n){
+	    int col = 1;
+	    while(col <= n){
+	        if(col <= n-row){
+	            cout << "  ";
+	        }
+	        else{
+	            cout << count << " ";
+	            count = count + 1;
+	        }
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern26
+/*     1
+      121
+		 12321
+		1234321
+		
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	
+	while(row <= n){
+	    
+	    int space = n-row;
+	    while(space){
+	        cout << " ";
+	        space = space - 1;
+	    }
+	    
+	    int col =  1;
+	    while(col <= row){
+	        cout << col;
+	        col = col + 1;
+	    }
+	    
+	    int start = row - 1;
+	    while(start){
+	        cout << start;
+	        start = start - 1;
+	    }
+	    
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern27
 /* 
