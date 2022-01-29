@@ -1,2 +1,196 @@
 // Pattern11
+/* AAA
+   BBB
+   CCC
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	
+	while(row <= n){
+	    int col = 1;
+	    while(col <= n){
+	        char ch = 'A' + row - 1;
+	        cout << ch;
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern12
+/* ABC
+   ABC
+   ABC
+   
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	
+	while(row <= n){
+	    int col = 1;
+	    while(col <= n){
+	        char ch = 'A' + col - 1;
+	        cout << ch;
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern13
+/* ABC
+   DEF
+   GHI
+   
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	char ch = 'A';
+	
+	while(row <= n){
+	    int col = 1;
+	    while(col <= n){
+	        cout << ch;
+	        ch = ch + 1;
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern14
+/* ABC
+   BCD
+   CDE
+   
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	
+	while(row <= n){
+	    char ch = 'A' + row - 1;
+	    int col = 1;
+	    while(col <= n){
+	        cout << ch;
+	        ch = ch + 1;
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern15
+/* A
+   BB
+   CCC
+   
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	
+	while(row <= n){
+	    int col = 1;
+	    char ch = 'A' + row - 1;
+	    while(col <= row){
+	        cout << ch;
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern16
+/* A
+   BC
+   DEF
+   
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	char ch = 'A';
+	
+	while(row <= n){
+	    int col = 1;
+	    while(col <= row){
+	        cout << ch;
+	        ch = ch + 1;
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern17
+/* A
+   BC
+   CDE
+   
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int row = 1;
+	
+	
+	while(row <= n){
+	    int col = 1;
+	    char ch = 'A' + row - 1;
+	    while(col <= row){
+	        cout << ch;
+	        ch = ch + 1;
+	        col = col + 1;
+	    }
+	    cout << endl;
+	    row = row + 1;
+	}
+	return 0;
+}
+*/
+
+// Pattern18
 /* 
