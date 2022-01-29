@@ -1,0 +1,25 @@
+// Check whether the given character is numeric, Lower case or Upper case character.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	char ch;
+	cin >> ch;
+	if ( int(ch) <= 57){
+	    if ( int(ch) >= 48){
+	        cout << "This is Numeric character." << endl;
+	    }
+	}
+	else if( int(ch) <= 90){
+	    if( int(ch) >= 65){
+	        cout << "This is Upper case character." << endl;
+	    }
+	}
+	else if( int(ch) <= 122){
+	    if( int(ch) >= 97){
+	        cout << "This is Lower case character." << endl;
+	    }
+	}
+	return 0;
+}
