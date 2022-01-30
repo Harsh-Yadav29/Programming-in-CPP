@@ -259,15 +259,15 @@ int main() {
    **
    *
    
-#include <iostream>                                                     #include<iostream>
-using namespace std;                                                    using namespace std;
+#include <iostream>                                                     
+using namespace std;                                                    
         
 int main(){                  																						int main(){
   int n;																																	int n;
 	cin >> n;																																cin >> n;
 	int row = 1;																														int row = 1;                   // This method is good, as you only care about printing "*"
 	 																																				
-	while(row <= n){                                 OR         						while(row <= n){
+	while(row <= n){                                 
 	    int col = 1;																													int col = 1;                  
 	    while(col <= n){																											while(col <= n - row + 1){
 	        if(col <= n-row+1){																									cout << "*";
@@ -287,8 +287,8 @@ int main(){                  																						int main(){
 // Pattern21
 /* ****
     ***
-	   **
-	    *
+     **
+      *
 	 
 #include <iostream>
 using namespace std;
@@ -319,8 +319,8 @@ int main() {
 // Pattern22
 /* 1111
     222
-		 33
-		  4
+     33
+      4
 			
 #include <iostream>
 using namespace std;
@@ -351,8 +351,8 @@ int main() {
 // Pattern23
 /*     1
       22
-		 333
-		4444
+     333
+    4444
 		
 #include <iostream>
 using namespace std;
@@ -383,8 +383,8 @@ int main() {
 // Pattern24
 /* 1234
     234
-		 34
-		  4
+     34
+      4
 			
 #include <iostream>
 using namespace std;
@@ -415,7 +415,7 @@ int main() {
 // Pattern25
 /*     1
       23
-		 456
+     456
 		 
 #include <iostream>
 using namespace std;
@@ -448,8 +448,8 @@ int main() {
 // Pattern26
 /*     1
       121
-		 12321
-		1234321
+     12321
+    1234321
 		
 #include <iostream>
 using namespace std;
