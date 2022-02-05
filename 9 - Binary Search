@@ -132,3 +132,29 @@ int main() {
 	
 	return 0;
 }
+
+
+// Finding Peak element in mountain array
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int arr[] = {3,4,5,1};
+	int start = 0;
+	int end = 3;
+	
+	while(start < end) {
+	    int mid = start + (end - start) / 2;
+	    if(arr[mid] < arr[mid + 1]) {
+	        start = mid + 1;
+	    }
+	    
+	    else {
+	        end = mid;
+	    }
+	}
+	
+	cout << arr[start];
+	return 0;
+}
