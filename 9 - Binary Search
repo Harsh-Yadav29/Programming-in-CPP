@@ -35,3 +35,100 @@ int main() {
 	
 	return 0;
 }
+
+// First and last occurence of a repeted number in a sorted array
+
+#include <iostream>
+using namespace std;
+
+
+int binarySearch(int arr[], int size, int key){
+    int start = 0;
+    int end = size - 1;
+    
+    while(start <= end) {
+        int mid = start + (end - start) / 2;
+        
+        if(arr[mid] == key){
+            return mid;
+        }
+        
+        else if(arr[mid] < key){
+            start = mid + 1;
+        }
+        
+        else{
+            end = mid - 1;
+        }
+    }
+    
+    return -1;
+}
+
+
+int firstOccurence(int arr[], int size, int key) {
+    int start = 0;
+    int end = size - 1;
+    int ans = -1;
+    
+    while(start <= end) {
+        int mid = start + (end - start) / 2;
+        
+        if(arr[mid] == key) {
+            ans = mid;
+            end = mid - 1;        //first occurence ke liye left me jaana hai
+        }
+        
+        else if(arr[mid] < key) {
+            start = mid + 1;       // key badi hai toh right side me jaana hai
+        }
+        
+        else if(arr[mid] > key) {
+            end = mid - 1;         // key chota hai toh left side me jaana hai     
+        }
+    }
+    
+    return ans;
+}
+
+
+int lastOccurence(int arr[], int size, int key) {
+    int start = 0;
+    int end = size - 1;
+    int ans = -1;
+    
+    while(start <= end) {
+        int mid = start + (end - start) / 2;
+        
+        if(arr[mid] == key) {
+            ans = mid;
+            start = mid + 1;        //last occurence ke liye right me jaana hai
+        }
+        
+        else if(arr[mid] < key) {
+            start = mid + 1;       // key badi hai toh right side me jaana hai
+        }
+        
+        else if(arr[mid] > key) {
+            end = mid - 1;         // key chota hai toh left side me jaana hai     
+        }
+    }
+    
+    return ans;
+}
+
+
+int main() {
+    
+	int arr[9] = {2,5,7,11,11,11,11,15,19};
+	int ans = binarySearch(arr, 9, 11);
+	cout << "Value 11 is at index " << ans << endl;
+	
+	int fst_ocr = firstOccurence(arr, 9, 11);
+	cout << "First occurence of 11 is at index " << fst_ocr << endl;
+	
+	int lst_ocr = lastOccurence(arr, 9, 11);
+	cout << "Last occurence of 11 is at index " << lst_ocr;
+	
+	return 0;
+}
