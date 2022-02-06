@@ -1,0 +1,28 @@
+// Selection Sort
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int arr[] = {7,5,1,9,3,8,6,2,4,12,41,21,26};
+	int size = sizeof(arr) / sizeof(arr[0]);
+	
+	for(int i = 0; i < size - 1; i++) {        // Second last element ke aage compare nahi karenge.
+	    
+	    int minIndex = i;
+	    for(int j = i+1; j < size; j++) {
+	        
+	        if(arr[j] < arr[minIndex]) {
+	            minIndex = j;
+	        }
+	    }
+	    
+	    swap(arr[i], arr[minIndex]);
+	}
+	
+	for(int k = 0; k < size; k++) {
+	    cout << arr[k] << " ";
+	}
+	
+	return 0;
+}
