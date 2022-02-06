@@ -1,4 +1,4 @@
-// Selection Sort
+# Selection Sort
 
 #include <iostream>
 using namespace std;
@@ -24,5 +24,36 @@ int main() {
 	    cout << arr[k] << " ";
 	}
 	
+	return 0;
+}
+
+# Bubble Sort
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int arr[] = {6,2,8,4,10};
+	int n = sizeof(arr) / sizeof(arr[0]);
+	
+	for(int i = 0; i < n-1; i++) {
+        bool swapped = false;
+        
+        for(int j = 0; j < n-i-1; j++) {
+            if(arr[j] > arr[j+1]) {
+                swap(arr[j], arr[j+1]);
+                swapped = true;
+            }
+        }
+        
+        if(swapped == false) {
+            break;
+        }
+    }
+	
+    for(int k = 0; k < n; k++) {
+        cout << arr[k] << " ";
+    }
+    
 	return 0;
 }
